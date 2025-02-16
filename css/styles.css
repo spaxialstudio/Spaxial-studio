@@ -79,3 +79,11 @@ footer {
     color: #888;  /* Texto gris claro */
     font-family: 'IBM Plex Mono', monospace;
 }
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: auto;
+}
+
