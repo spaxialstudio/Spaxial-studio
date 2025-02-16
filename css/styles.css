@@ -1,7 +1,7 @@
 /* Aplicar las fuentes */
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.6;
     color: #333;  /* Color de texto principal */
     background-color: #f5f5f5;  /* Fondo claro */
@@ -24,7 +24,7 @@ h1 {
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 10px;
     margin-bottom: 10px;
 }
 
