@@ -3,8 +3,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #333;  /* Color de texto principal */
+    background-color: #f5f5f5;  /* Fondo claro */
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ h1, h2 {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 700;
     text-transform: uppercase;
-    color: #000;
+    color: #000; /* Negro para mayor contraste */
 }
 
 h1 {
@@ -44,7 +44,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    color: #000;
+    color: #000; /* Negro para enlaces */
 }
 
 /* Secciones */
@@ -76,6 +76,6 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #000;
-    color: #fff;
+    color: #888;  /* Texto gris claro */
     font-family: 'IBM Plex Mono', monospace;
 }
