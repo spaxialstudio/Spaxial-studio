@@ -3,76 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPAXIAL STUDIO</title>
+    <title>Spaxial Arquitectos Asociados</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="logo.png" alt="Spaxial Arquitectos Asociados">
         </div>
         <nav>
             <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT US</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#learn">LEARN</a></li>
+                <li><a href="#portfolio">PORTAFOLIO</a></li>
+                <li><a href="#shop">SHOP</a></li>
+                <li class="dropdown">
+                    <a href="#about">ABOUT ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#who">Who Is?</a></li>
+                        <li><a href="#hobbies">Nuestros Gustos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section id="home" class="section active">
-            <h1>WELCOME TO SPAXIAL STUDIO</h1>
-            <p>Discover our world of architectural innovation.</p>
+        <section id="home">
+            <h1>Bienvenido a Spaxial Arquitectos Asociados</h1>
+            <p>Explora nuestro trabajo y descubre nuestros proyectos.</p>
         </section>
-        
-        <section id="about" class="section">
-            <h2>ABOUT US</h2>
-            <p>We are an architectural studio focused on delivering high-quality designs.</p>
+        <section id="blog" class="hidden">
+            <h2>BLOG</h2>
+            <p>Publicaremos contenido educativo aquí.</p>
         </section>
-        
-        <section id="portfolio" class="section">
-            <h2>PORTFOLIO</h2>
-            <p>Explore our past and current projects.</p>
+        <section id="learn" class="hidden">
+            <h2>LEARN</h2>
+            <p>Videos y recursos sobre software 2D y 3D.</p>
         </section>
-        
-        <section id="services" class="section">
-            <h2>SERVICES</h2>
-            <p>We provide architectural solutions tailored to your needs.</p>
+        <section id="portfolio" class="hidden">
+            <h2>PORTAFOLIO</h2>
+            <p>Explora nuestros proyectos arquitectónicos.</p>
         </section>
-        
-        <section id="contact" class="section">
-            <h2>CONTACT</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Subject" required>
-                <label>
-                    Need an architect?
-                    <input type="checkbox">
-                </label>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">SEND</button>
+        <section id="shop" class="hidden">
+            <h2>SHOP</h2>
+            <p>Productos exclusivos de carpintería.</p>
+        </section>
+        <section id="who" class="hidden">
+            <h2>Who Is?</h2>
+            <p>Información sobre nuestro equipo.</p>
+        </section>
+        <section id="hobbies" class="hidden">
+            <h2>Nuestros Gustos</h2>
+            <p>Compartimos nuestros intereses personales.</p>
+        </section>
+        <section id="contact" class="hidden">
+            <h2>CONTACTO</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellido" required>
+                <input type="email" placeholder="Correo" required>
+                <label>¿Necesitas un arquitecto?</label>
+                <input type="radio" name="need_architect" value="si"> Sí
+                <input type="radio" name="need_architect" value="no"> No
+                <textarea placeholder="Describe tu proyecto"></textarea>
+                <button type="submit">ENVIAR</button>
             </form>
         </section>
     </main>
     
-    <footer>
-        <p>&copy; 2025 SPAXIAL STUDIO. All rights reserved.</p>
-    </footer>
-
-    <script>
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelectorAll('.section').forEach(section => {
-                    section.classList.remove('active');
-                });
-                const target = document.querySelector(this.getAttribute('href'));
-                target.classList.add('active');
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
