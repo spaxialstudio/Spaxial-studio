@@ -20,8 +20,6 @@ header {
     z-index: 1000;
 }
 
-}
-
 nav ul {
     list-style: none;
     display: flex;
@@ -91,11 +89,4 @@ footer {
     background-color: #333;
     color: white;
     margin-top: 20px;
-}
-.logo {
-    position: absolute;
-    top: -10px;  /* Subirá la imagen 10px fuera de su posición normal */
-    left: -10px; /* Se moverá 10px hacia la izquierda */
-    width: 150px;
-    height: auto;
 }
