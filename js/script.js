@@ -1,27 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".menu-link");
-    const sections = document.querySelectorAll("main section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+    const sections = document.querySelectorAll("section");
 
-    // Ocultar todas las secciones excepto "HOME"
     sections.forEach(section => {
         if (section.id !== "home") {
-            section.classList.add("hidden");
+            section.style.display = "none";
         }
     });
 
-    // Agregar evento a cada enlace del menú
-    links.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
 
-            // Ocultar todas las secciones
             sections.forEach(section => {
-                section.classList.add("hidden");
+                section.style.display = "none";
             });
 
-            // Mostrar solo la sección seleccionada
-            document.getElementById(targetId).classList.remove("hidden");
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.style.display = "block";
+            }
         });
+    });
+
+    const contactForm = document.getElementById("contact-form");
+    const formMessage = document.getElementById("form-message");
+
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        formMessage.style.display = "block";
+        formMessage.textContent = "¡Gracias por tu mensaje!";
+        contactForm.reset();
     });
 });
