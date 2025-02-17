@@ -61,19 +61,19 @@ nav ul li a:hover {
 
 /* Sección principal */
 main {
-    margin-top: 100px; /* Ajuste para evitar que el contenido quede tapado por el header fijo */
+    margin-top: 100px;
     padding: 50px;
 }
 
 /* Secciones ocultas por defecto */
 .section {
-    display: none; /* Oculta todas las secciones por defecto */
+    display: none; /* Las secciones se mantienen ocultas por defecto */
     padding: 50px;
 }
 
 /* Sección activa */
 .section.active {
-    display: block; /* Solo se muestra la sección activa */
+    display: block; /* Solo la sección activa se muestra */
 }
 
 /* Footer */
