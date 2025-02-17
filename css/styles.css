@@ -62,9 +62,25 @@ nav ul li a:hover {
 /* Sección principal */
 main {
     margin-top: 100px; /* Ajuste para evitar que el contenido quede tapado por el header fijo */
-    text-align: center;
     padding: 50px;
 }
 
 /* Secciones ocultas por defecto */
-.sec
+.section {
+    display: none; /* Oculta todas las secciones por defecto */
+    padding: 50px;
+}
+
+/* Sección activa */
+.section.active {
+    display: block; /* Solo se muestra la sección activa */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
