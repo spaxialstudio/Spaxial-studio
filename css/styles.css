@@ -1,89 +1,96 @@
-/* Reset básico */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Estilos generales */
-body {
     background-color: #f4f4f4;
     color: #333;
-    text-align: center;
 }
 
 header {
-    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
+    background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
     padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #666;
-    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
 }
 
 nav ul li a:hover {
-    color: #000;
+    color: #0073e6;
 }
 
-/* Secciones */
 main {
-    padding: 50px 20px;
+    margin-top: 80px;
+    text-align: center;
 }
 
-section {
-    display: block;
+.section {
+    display: none;
     padding: 50px;
-    background: white;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: auto;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-/* Ocultar secciones por defecto */
-.hidden {
-    display: none;
-}
-
-/* Footer */
-footer {
-    background: #222;
+button {
+    background-color: #0073e6;
     color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-}
-
-/* Mensaje de Confirmación */
-#form-message {
-    color: green;
-    font-size: 14px;
     font-weight: bold;
-    display: none;
+    border: none;
+    cursor: pointer;
 }
 
-/* Footer */
+button:hover {
+    background-color: #005bb5;
+}
+
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #222;
+    background-color: #333;
     color: white;
-    font-size: 12px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
