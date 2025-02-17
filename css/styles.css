@@ -38,6 +38,8 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -59,71 +61,10 @@ nav ul li a:hover {
 
 /* Sección principal */
 main {
-    margin-top: 100px;
+    margin-top: 100px; /* Ajuste para evitar que el contenido quede tapado por el header fijo */
     text-align: center;
     padding: 50px;
 }
 
 /* Secciones ocultas por defecto */
-.section {
-    display: none;
-    padding: 50px;
-}
-
-/* Sección activa */
-.section.active {
-    display: block;
-}
-
-/* Formulario de contacto */
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-}
-
-.contact-text {
-    width: 50%;
-    text-align: left;
-}
-
-.contact-form {
-    width: 50%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-}
-
-input, textarea, button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-}
-
-button {
-    background-color: #0073e6;
-    color: white;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    padding: 12px;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
-}
+.sec
