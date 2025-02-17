@@ -1,36 +1,24 @@
+// Espera a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll("nav ul li a");
-    const sections = document.querySelectorAll("section");
+    const links = document.querySelectorAll("nav ul li a");
+    const sections = document.querySelectorAll(".section");
 
-    sections.forEach(section => {
-        if (section.id !== "home") {
-            section.style.display = "none";
-        }
-    });
-
-    navLinks.forEach(link => {
+    // Agrega evento a cada enlace del menú
+    links.forEach(link => {
         link.addEventListener("click", function (e) {
-            e.preventDefault();
+            e.preventDefault(); // Evita que recargue la página
 
-            sections.forEach(section => {
-                section.style.display = "none";
-            });
+            // Remueve la clase 'active' de todas las secciones
+            sections.forEach(section => section.classList.remove("active"));
 
+            // Obtiene el ID de la sección a mostrar
             const targetId = this.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
+
+            // Activa la sección seleccionada
             if (targetSection) {
-                targetSection.style.display = "block";
+                targetSection.classList.add("active");
             }
         });
-    });
-
-    const contactForm = document.getElementById("contact-form");
-    const formMessage = document.getElementById("form-message");
-
-    contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        formMessage.style.display = "block";
-        formMessage.textContent = "¡Gracias por tu mensaje!";
-        contactForm.reset();
     });
 });
